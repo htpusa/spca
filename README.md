@@ -17,7 +17,7 @@ c = tunespca(X,'K',2);
 [coeff,score] = spca(X,c,'K',2);
 ```
 
-The function `tunespca` finds optimal values for the sparsity parameter using the missing value imputation scheme proposed in Witten et al. (2009). The parameter is optimised sequantially for each successive component, `c(1)`is the optimal value for the first component etc.
+The function `tunespca` finds optimal values for the sparsity parameter using the missing value imputation scheme proposed in Witten et al. (2009). The parameter is optimised sequentially for each successive component, `c(1)`is the optimal value for the first component etc.
 
 For more information about the arguments and behaviour, see
 ```MATLAB
