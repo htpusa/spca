@@ -53,6 +53,17 @@ end
             cont = abs(diff) > convergenceCrit && iter2<=maxI;
             iter2 = iter2+1;
         end
+
+        function y = softThresh(x,c)
+            y = abs(x)-c;
+            y(y<0) = 0;
+            y = sign(x) .* y;
+        end
+
+    end
+
+    function xProj = projectL2(x,c)
+        xProj = c*x/norm(x,2);
     end
 
 end

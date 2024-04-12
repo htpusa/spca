@@ -150,7 +150,7 @@ V = zeros(p,K,L);
 SCORE = zeros(n,K,L);
 EXPLAINED = zeros(K,L);
 
-X = X - mean(X,1,"omitmissing");
+X = X - mean(X,1,"omitnan");
 if any(isnan(X),"all")
     warning('Replacing missing values with 0')
     X(isnan(X)) = 0;
